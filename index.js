@@ -60,3 +60,45 @@ function getForecast(city) {
   let apiURL = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
   axios(apiURL).then(showForecast);
 }
+
+function showForecast(response) {
+  console.log(response.data);
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+  let forecastHTML = "";
+
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+      <div class="weather-forecast">
+      <div class="row">
+        <div class="col-2">
+         <div class="weather-forecast-date">
+          ${day}
+         </div>
+          <span class= "forecast-emoji">🌤️</span> 
+          <div class="weather-forecast-temperatures">
+            <span class="weather-forecast-temperature-min">
+              
+          12° 
+          </span>
+            <span class="weather-forecast-temperature-max">
+              
+          18°
+          </span>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+      `;
+  });
+
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHTML;
+}
+let formInput = document.querySelector("#form");
+formInput.addEventListener("submit", changeCity);
+
+findCity("Paris");
