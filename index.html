@@ -8,6 +8,62 @@
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
   </head>
   <body>
+<div class="structure">
+    <form id="form">
+      <input
+        type="text"
+        placeholder="Enter a city"
+        class="search-input"
+        id="search-input"
+      />
+      <input type="submit" value="submit" class="submit" id="submit" />
+    </form  >
+    <main>
+      <div class="weather-app-data">
+    <h1>
+      <div class="city"id="city">Paris</div>
+    </h1>
+    <div class="temperature">
+      <div id= "icon" class="sun"></div>
+     <div class="temp" id="temp"></div><div class="celcius">°C</div>
+    </div>
+    </div>
+    <p1>
+      <span class="day" id = "dateTime" >Tuesday 15:22</span>,  <span id="description">Moderate rain</span> 
+      <br/>
+     Humidity  <strong id="Humidity">  </strong><strong>%</strong>,  
+       Wind <strong id="wind"></strong><strong>  km/h</strong>
+    </p1>
+    <br/>
+    <br/>
+    <div class="weather-forecast" id="forecast">
+    </div>
+    
+    </main>
+    
+    
+
+<br/>
+    <hr/>
+    <p2
+      >This project was coded by
+      <a href="https://github.com/Luba20" target="_blank">Lubelihle Jiyane</a> ,
+      hosted on
+      <a
+        href="https://github.com/Luba20/WEATHER-WEEK-7-PROJECT"
+        target="_blank"
+      >
+        Github
+      </a>
+      and deployed on
+      <a
+        href="https://app.netlify.com/sites/comforting-faloodeh-a4a414/overview"
+        target="_blank"
+        >Netlify</a
+      >
+      </div>
+    </p2>
+
     <script src="src/index.js"></script>
   </body>
 </html>
