@@ -20,6 +20,8 @@ function changeTemp(response) {
 
   let icon = document.querySelector("#icon");
   icon.innerHTML = `<img src ="${response.data.condition.icon_url}" class = "weather-app-icon" />`;
+
+  getForecast(response.data.city);
 }
 function getDateTime(date) {
   let minutes = date.getMinutes();
