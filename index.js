@@ -43,3 +43,20 @@ function getDateTime(date) {
   let day = days[date.getDay()];
   return `${day} ${hours}:${minutes}`;
 }
+function findCity(city) {
+  let apiKey = "b6e06o2b641ddbc9et442a295318f3fd";
+  let url = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+  axios.get(url).then(changeTemp);
+}
+
+function changeCity(event) {
+  event.preventDefault();
+  let input = document.querySelector("#search-input");
+
+  findCity(input.value);
+}
+function getForecast(city) {
+  let apiKey = "b6e06o2b641ddbc9et442a295318f3fd";
+  let apiURL = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios(apiURL).then(showForecast);
+}
