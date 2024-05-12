@@ -66,7 +66,7 @@ strong {
   background-color: #00548f;
   border: groove;
   border-radius: 120px;
-  padding: 70px;
+  padding: 50px;
   border-color: white;
   max-width: 550px;
 }
@@ -79,11 +79,16 @@ a {
 }
 
 .weather-forecast-date {
-  font-size: 22px;
+  font-size: 16px;
   font-weight: 500px;
+
+  line-height: 20px;
 }
 .forecast-emoji {
-  font-size: 17px;
+  width: 88px;
+  height: 88px;
+  position: relative;
+  right: 28px;
 }
 .weather-forecast-temperature-max {
   font-weight: bolder;
@@ -93,11 +98,11 @@ a {
 .weather-forecast-temperature-min {
   opacity: 0.3px;
   font-size: 17px;
-  line-height: 10px;
+
   color: wheat;
 }
 .weather-forecast {
-  display: inline-flex;
-  margin-top: 20px;
-  margin-right: 55px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
 }
